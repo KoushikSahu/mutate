@@ -1,0 +1,8 @@
+# data files
+data/
+
+# editor settings
+.vscode/
+
+# python cache
+__pycache__/
