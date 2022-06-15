@@ -19,12 +19,10 @@ def validate(dl, model, verbose=False):
                                               min_length=0,
                                               max_length=Config.max_length)
 
-            for input_text, paraphrase_text, batch_output_id in zip(text_batch,
-                                                                    paraphrase_batch,
-                                                                    batch_output_ids):
-                predicted_paraphrase = Config.tokenizer.decode(batch_output_id,
-                                                               skip_special_tokens=True,
-                                                               clean_up_tokenization_spaces=False)
+            for input_text, paraphrase_text, batch_output_id in zip(
+                    text_batch, paraphrase_batch, batch_output_ids):
+                predicted_paraphrase = Config.tokenizer.decode(
+                    batch_output_id, skip_special_tokens=True, clean_up_tokenization_spaces=False)
 
                 if verbose:
                     print(f'Text                 : {input_text}')
